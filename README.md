@@ -7,8 +7,19 @@ another js router
 example:
 
 ```javascript
-Road
+var opts = {
+  'home': 'home',
+  'fragment': '!'
+}
+var road = Road.init(opts);
+
+road
 .to('home')
+.use('HomeWare', function() {
+  var name1 = [1, 2, 3];
+  var name2 = {a: 'a', b: 'b'};
+  return {name1: name1, name2: name2};
+})
 .do({
   middleware: 'HomeWare',
   template: 'home', // it will get the innerHTML of $('#home-template')
