@@ -21,7 +21,6 @@ road
   return {name1: name1, name2: name2};
 })
 .do({
-  middleware: 'HomeWare',
   template: 'home', // it will get the innerHTML of $('#home-template')
   then: function(data, html) {
     // the data was transferred from the middleware as object
